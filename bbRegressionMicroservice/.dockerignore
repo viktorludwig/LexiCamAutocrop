@@ -1,0 +1,9 @@
+logs/
+testfiles/
+__pycache__/
+*.py[cod]
+.DS_Store
+
+*.pkl
+*.csv
+*.gz

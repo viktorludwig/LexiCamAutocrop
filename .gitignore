@@ -1,4 +1,3 @@
-
 Images/
 roi_test_set_max640/
 roi_test_set_max480/
@@ -6,11 +5,18 @@ shrinked_for_training_bb/
 all_images_full/
 images_to_fix/
 deprecated/
-bbRegressionMicroservice/testfiles/
 new/
+
+bbRegressionMicroservice/testfiles/
+bbRegressionMicroservice/logs/
+
 *.onnx
 *.pkl
 *.csv
 *.gz
-__pycache__/
 
+__pycache__/
+.ipynb_checkpoints/
+*.py[cod]
+
+.DS_Store
