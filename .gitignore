@@ -20,3 +20,6 @@ __pycache__/
 *.py[cod]
 
 .DS_Store
+bbRegressionMicroservice/pyproject.toml
+bbRegressionMicroservice/uv.lock
+bbRegressionMicroservice/.python-version
