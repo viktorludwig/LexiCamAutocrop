@@ -1,5 +1,7 @@
 # LexiCam ROI Autocrop
 
+_Developed between 2021 and 2023; revisited in 2026._
+
 This repository documents the region-of-interest (ROI) autocrop component used in LexiCam's reverse image search pipeline. The model predicts a bounding box around the artwork or object that should be cropped before similarity search.
 
 ![Illustration of algorithm](/readme_images/algo_illustration.png "Reverse image search")
@@ -92,3 +94,7 @@ Application test set: ~71.5% IOU, 0% misses
   - serving the model on a server with GPUs
   - reducing the computational complexity via [Quantization](https://pytorch.org/docs/stable/quantization.html) (FasterRCNN with Mobilenet was not supported for quantization in PyTorch at the time of writing)
 - Search the current dataset for hard cases to identify which additional images would be most useful
+
+### 2026 Update
+
+By 2026, the model and deployment landscape has changed substantially. More efficient transformer-based detectors, such as RF-DETR, can achieve higher mAP than Faster R-CNN with only modest additional computational cost. At the same time, React Native integrations for runtimes such as ExecuTorch and ONNX Runtime make it much more practical to run inference directly on mobile devices. That could remove one network round trip from the search process while also allowing the app to use a stronger object detection model for autocrop.
